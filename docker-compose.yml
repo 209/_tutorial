@@ -1,0 +1,5 @@
+_tutorial:
+  build: .
+  ports:
+  - 5001:80
+  restart: always
