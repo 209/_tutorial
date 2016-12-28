@@ -1,17 +1,15 @@
-
-import _ from 'lodash';
 import App from 'App';
 
 class Init {
     constructor() {
-        document.addEventListener("DOMContentLoaded", this.ready);
+        document.addEventListener('DOMContentLoaded', this.ready);
     }
 
-    ready() {
+    static ready() {
         window.inst = new App();
     }
 }
 
-new Init();
+window.inst = new Init();
 
 export default Init;
