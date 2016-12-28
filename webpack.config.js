@@ -3,16 +3,17 @@ var path = require('path');
 module.exports = {
     context: __dirname + '',
     resolve: {
-        root: __dirname + 'app/static'
+        root: __dirname + '/app/static'
     },
     entry: {
-        app: __dirname + '/app/static/app.js'
+        init: __dirname + '/app/static/init.js'
     },
     output: {
-        path: __dirname + '/public',
-        libraryTarget: 'amd',
-        filename: 'app.js'
+        path: __dirname + '/app/build',
+        // libraryTarget: 'amd',
+        filename: 'init.js'
     },
+    devtool: '#inline-source-map',
     module: {
         loaders: [{
             test: /\.js$/,

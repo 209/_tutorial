@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
-class Test {
+class Main {
     constructor() {
-        window.alert('test');
+
     }
 }
 
-export default new Test;
+export default Main;
