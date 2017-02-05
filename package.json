@@ -21,20 +21,20 @@
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",
     "html-loader": "0.4.0",
     "imports-loader": "0.6.5",
     "lodash": "4.13.1",
     "merge-stream": "1.0.0",
     "node-sass": "3.8.0",
-    "npm": "^4.0.5",
+    "npm": "^4.2.0",
     "resolve-url-loader": "1.6.0",
     "sass-loader": "^4.1.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
-    "webpack": "^2.2.0-rc.3",
-    "webpack-dev-server": "^2.2.0-rc.0"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.2.0"
   },
   "devDependencies": {}
 }
