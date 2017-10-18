@@ -1,7 +1,7 @@
-_tutorial:
+project_env:
   build: .
   volumes:
-    - '/Users/ikolevatykh/Documents/projects/_tutorial:/_tutorial'
+    - '/Users/ikolevatykh/WebstormProjects/project_env:/project_env'
   ports:
-  - 5001:80
+  - 5002:80
   restart: always

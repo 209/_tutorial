@@ -1,2 +1,2 @@
 docker-compose up -d &&
-docker exec -it tutorial__tutorial_1 /bin/bash
+docker exec -it projectenv_project_env_1 /bin/bash
