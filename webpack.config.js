@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 const os = require('os');
 
 module.exports = {
@@ -6,11 +6,11 @@ module.exports = {
   resolve: {
     modules: [
       path.join(__dirname, '/app/static'),
-      'node_modules'
-    ]
+      'node_modules',
+    ],
   },
   entry:   {
-    init: path.join(__dirname, '/app/static/init.js')
+    init: path.join(__dirname, '/app/static/init.js'),
   },
   output:  {
     path: path.join(__dirname, '/app/build'),
@@ -28,7 +28,7 @@ module.exports = {
         options: {
           cacheDirectory: os.tmpdir(),
         },
-      }]
-    }]
-  }
+      }],
+    }],
+  },
 };

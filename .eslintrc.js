@@ -55,31 +55,30 @@ const eslintrc = {
     'comma-dangle':                            [
       'error',
       'always-multiline'
+    ],
+    'key-spacing':                             [
+      "error",
+      {
+        "align": {
+
+          "on":          "value"
+        }
+      }
+    ],
+    'indent':                                  [
+      "error",
+      2,
+      {
+        "VariableDeclarator": {
+          "var":   2,
+          "let":   2,
+          "const": 3
+        },
+        "MemberExpression":   1,
+        "ObjectExpression":   1
+      }
     ]
-  },
-  globals:       {
-    gemini: true
   }
 };
-
-if (process.env.RUN_ENV === 'DEMO') {
-  eslintrc.globals = Object.assign({}, eslintrc.globals, {
-    React:     true,
-    ReactDOM:  true,
-    mountNode: true,
-  });
-
-  Object.assign(eslintrc.rules, {
-    'no-console':                  0,
-    'no-plusplus':                 0,
-    'eol-last':                    0,
-    'prefer-rest-params':          0,
-    'react/no-multi-comp':         0,
-    'jsx-a11y/href-no-hash':       0,
-    'import/newline-after-import': 0,
-    'react/no-unescaped-entities': 0,
-    'no-script-url':               0,
-  });
-}
 
 module.exports = eslintrc;
