@@ -57,11 +57,17 @@ const eslintrc = {
       'always-multiline'
     ],
     'key-spacing':                             [
-      "error",
+      2,
       {
-        "align": {
-
-          "on":          "value"
+        "multiLine": {
+          "beforeColon": false,
+          "afterColon":  true,
+        },
+        "align":     {
+          "beforeColon": false,
+          "afterColon":  true,
+          "on":          "value",
+          "mode":        "minimum"
         }
       }
     ],
