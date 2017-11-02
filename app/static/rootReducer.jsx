@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import app from './store/app';
-import entities from './store/entities';
+import pokemonReducer from './store/pokemon/reducer';
 
 const mainReducer = combineReducers({
-  app:      app.reducer,
-  entities: entities.reducer,
+  pockemones: pokemonReducer,
 });
 
 const rootReducer = (state, action) => mainReducer(state, action);

@@ -1,5 +1,3 @@
-const getRoot = state => state.pokemons;
-
-
-export const getEmptyProjectsIds = (state) => {
+export const getPockemones = (state) => {
+  return state.pockemones;
 };

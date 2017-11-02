@@ -4,13 +4,14 @@ const os = require('os');
 module.exports = {
   context: path.join(__dirname),
   resolve: {
-    modules: [
+    extensions: ['.js', '.json', '.jsx', '.css', '.scss', '.html'],
+    modules:    [
       path.join(__dirname, '/app/static'),
       'node_modules',
     ],
   },
   entry:   {
-    init: path.join(__dirname, '/app/static/init.js'),
+    init: path.join(__dirname, '/app/static/init.jsx'),
   },
   output:  {
     path: path.join(__dirname, '/app/build'),
@@ -21,7 +22,7 @@ module.exports = {
   devtool: '#inline-source-map',
   module:  {
     rules: [{
-      test:    /\.js$/,
+      test:    /\.js|.jsx$/,
       exclude: /node_modules/,
       use:     [{
         loader:  'babel-loader',

@@ -5,42 +5,25 @@ import * as actions from './actions';
 import { getPockemons } from '../../api/pokeapi';
 import * as pokemonSelectors from './selectors';
 
-function* getCampaigns() {
+function* getPockemones() {
   try {
-    // const state = yield select();
-    // const projectsIds = EntitiesSelectors.getEmptyProjectsIds(state);
-    //
-    // if (!projectsIds.length) {
-    //   return;
-    // }
-    // const response = yield fetchCampaignsStatsByProjectsIds(projectsIds);
-    // const campaigns = (yield select()).entities.campaigns;
-    // let result = response;
-    //
-    // if (campaigns.length) {
-    //   result = mergeData(response, campaigns, 'project_id');
-    // }
-    //
-    // yield put(actions.fetchCampaignsByProjectsIdsSuccess(result));
-
-    // return {
-    //   campaigns: result,
-    // };
+    const response = yield getPockemons();
+    yield put(actions.fetchPockemonesSuccess(response));
   } catch (err) {
-    // yield put(actions.fetchCampaignsByProjectsIdsFailure());
-    // return {};
+    yield put(actions.fetchPockemonesFailure());
+    return {};
   }
 }
 
-function* getCampaignsDelay() {
-  yield delay(2000);
-  yield call(getCampaigns);
+function* replyGetPockemones() {
+  yield delay(5000);
+  yield call(getPockemones);
 }
 
 
 export default function* entitiesSaga() {
   yield all([
-    takeLatest(actionTypes.FETCH_CAMPAIGNS_BY_PROJECTS_IDS_REQUEST, getCampaigns),
-    takeLatest(actionTypes.FETCH_CAMPAIGNS_BY_PROJECTS_IDS_FAILURE, getCampaignsDelay),
+    takeLatest(actionTypes.FETCH_POCKEMONES_REQUEST, getPockemones),
+    takeLatest(actionTypes.FETCH_POCKEMONES_FAILURE, replyGetPockemones),
   ]);
 }
