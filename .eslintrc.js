@@ -1,26 +1,26 @@
 const eslintrc = {
   extends:       [
-    'eslint-config-airbnb'
+    'eslint-config-airbnb',
   ],
   env:           {
     browser: true,
     node:    true,
     jasmine: true,
     jest:    true,
-    es6:     true
+    es6:     true,
   },
   parser:        'babel-eslint',
   parserOptions: {
     ecmaVersion:  6,
     ecmaFeatures: {
       jsx:                          true,
-      experimentalObjectRestSpread: true
-    }
+      experimentalObjectRestSpread: true,
+    },
   },
   plugins:       [
     'markdown',
     'react',
-    'babel'
+    'babel',
   ],
   rules:         {
     'func-names':                              0,
@@ -34,13 +34,14 @@ const eslintrc = {
         extensions: [
           '.js',
           '.jsx',
-          '.md'
-        ]
-      }
+          '.md',
+        ],
+      },
     ],
     'import/extensions':                       0,
     'import/no-unresolved':                    0,
     'import/no-extraneous-dependencies':       0,
+    'import/prefer-default-export':            0,
     'no-param-reassign':                       0,
     'no-return-assign':                        0,
     'max-len':                                 0,
@@ -54,37 +55,37 @@ const eslintrc = {
     'react/prefer-stateless-function':         0,
     'comma-dangle':                            [
       'error',
-      'always-multiline'
+      'always-multiline',
     ],
     'key-spacing':                             [
       2,
       {
-        "multiLine": {
-          "beforeColon": false,
-          "afterColon":  true,
+        'multiLine': {
+          'beforeColon': false,
+          'afterColon':  true,
         },
-        "align":     {
-          "beforeColon": false,
-          "afterColon":  true,
-          "on":          "value",
-          "mode":        "minimum"
-        }
-      }
+        'align':     {
+          'beforeColon': false,
+          'afterColon':  true,
+          'on':          'value',
+          'mode':        'minimum',
+        },
+      },
     ],
     'indent':                                  [
-      "error",
+      'error',
       2,
       {
-        "VariableDeclarator": {
-          "var":   2,
-          "let":   2,
-          "const": 3
+        'VariableDeclarator': {
+          'var':   2,
+          'let':   2,
+          'const': 3,
         },
-        "MemberExpression":   1,
-        "ObjectExpression":   1
-      }
-    ]
-  }
+        'MemberExpression':   1,
+        'ObjectExpression':   1,
+      },
+    ],
+  },
 };
 
 module.exports = eslintrc;
